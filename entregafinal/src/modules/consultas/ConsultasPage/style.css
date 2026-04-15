@@ -1,0 +1,115 @@
+.records-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.records-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.records-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summary-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf9 100%);
+  border: 1px solid #dbe7e1;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.summary-card__label {
+  display: block;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.summary-card__value {
+  display: block;
+  color: #065f46;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.summary-card__value--small {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.records-table-card,
+.records-empty {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.05);
+}
+
+.records-table-card__header,
+.records-empty {
+  padding: 20px 22px;
+}
+
+.records-table-card__header h3,
+.records-empty h3 {
+  color: #0f172a;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.records-table-wrap {
+  overflow-x: auto;
+  border-top: 1px solid #eef2f7;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.records-table th,
+.records-table td {
+  padding: 16px 22px;
+  text-align: left;
+}
+
+.records-table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+.records-table tbody tr {
+  border-top: 1px solid #eef2f7;
+}
+
+.records-table tbody tr:hover {
+  background: #f8fffc;
+}
+
+.status-badge--pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+@media (max-width: 900px) {
+  .records-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .records-page .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
